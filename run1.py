@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-np.bool=np.bool_
 import pickle
 import base64
 
