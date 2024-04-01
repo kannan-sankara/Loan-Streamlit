@@ -4,9 +4,9 @@ import numpy as np
 import pickle
 import base64
 
+np.bool = np.bool_
+np.object = object  
 
-
-@st.cache(suppress_st_warning=True)
 def get_fvalue(val):
     feature_dict = {"No":1,"Yes":2}
     for key,value in feature_dict.items():
@@ -28,7 +28,7 @@ if app_mode=='Home':
    
 elif app_mode =='Prediction':
     
-    csv=pd.read_csv("informations.csv")
+    csv=pd.read_csv("test.csv")
     st.write(csv)
 
     #st.image('slider-short-3.jpg')
